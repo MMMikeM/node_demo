@@ -1,6 +1,8 @@
 import express, { Request, Response, NextFunction } from "express"
+import "dotenv/config"
+import { Express } from "express-serve-static-core"
 
-export const options = async ({ app }) => {
+export const options = async (app: Express) => {
   // Endpoint to check status
   app.get("/status", (_req: Request, res: Response) => {
     res.status(200).end()
@@ -11,7 +13,7 @@ export const options = async ({ app }) => {
   app.use(express.urlencoded({ extended: true }))
 
   // Start app
-  const port = process.env.PORT || 4000
+  const port = process.env.PORT || 5000
 
   app.listen(port, () => {
     console.log("Server running on port: ", port)
