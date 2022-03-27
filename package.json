@@ -1,0 +1,26 @@
+{
+  "name": "node_demo",
+  "version": "1.0.0",
+  "description": "A demo to teach grads how to write a basic express app",
+  "main": "/src/index.ts",
+  "scripts": {
+    "dev": "node-dev --respawn --clear ./src/index.ts"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "demo"
+  ],
+  "author": "Mike Murray",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.23",
+    "node-dev": "^7.4.0"
+  }
+}
